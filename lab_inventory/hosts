@@ -1,0 +1,15 @@
+
+[web]
+node3 ansible_host=node3.example.com
+node2 ansible_host=node2.example.com
+node1 ansible_host=node1.example.com
+
+[control]
+ansible-1 ansible_host=ansible-1.example.com
+
+[all:vars]
+timeout=60
+ansible_user=ec2-user
+ansible_ssh_private_key_file="~/.ssh/7wdwvkey.pem"
+ansible_ssh_common_args="-o StrictHostKeyChecking=no"
+ansible_become=true
